@@ -9,10 +9,15 @@ import com.alkber.androidmssql2008.datastore.Dao;
 import com.alkber.androidmssql2008.listeners.DBConnectionListener;
 
 /**
- * Main activity class for the demo
+ * Main activity class for the demo, 
+ * 
+ * Read http://blog.althafkbacker.com/2013/10/android
+ * -and-microsoft-sql-ms-sql-server.html
+ * 
+ * To setup jTDS - SQL Server and Sybase JDBC driver, for android.
  * 
  * @author Althaf K Backer <althafkbacker@gmail.com>
- *
+ * 
  */
 public class MSSQLConnActivity extends Activity implements DBConnectionListener {
 
@@ -43,8 +48,7 @@ public class MSSQLConnActivity extends Activity implements DBConnectionListener 
 	public void onResume() {
 
 		super.onResume();
-		dao.connect("xxx.xxx.xxx.xxx:1433", "password", "user",
-				"dbname");
+		dao.connect("xxx.xxx.xxx.xxx:1433", "password", "user", "dbname");
 
 	}
 
